@@ -1,0 +1,143 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+    background-color: #181818;
+    color: white;
+    margin-bottom: 10px;
+    align-items: center;
+    box-shadow: 0 4px 2px -2px rgba(0,0,0,0.2); 
+   position: sticky;
+   top: 0;
+   z-index: 10;
+}
+.navbar__s1{
+    margin-left: 20px;
+}
+.navbar__s2{
+    width: 50%;
+    background-color: #181818;
+    border-radius: 5px;
+    height: 40px;
+    border: solid gainsboro 1px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    padding-left: 15px;
+    
+}
+
+.navbar__s2 input{
+    border: none;
+    width: 80%;
+    background-color: #181818;
+    color: white;
+}
+.navbar__s2 input:focus {
+    outline: none;
+}
+.navbar__s3{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin-right: 25px;
+}
+.navbar__s3 a{
+    text-decoration: none;
+    color: gainsboro;
+}
+.navbar__s3 a:hover{
+    color:white;
+    text-decoration: underline gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    background-color: #181818;
+    color: white;
+    padding: 40px;
+    margin-top: 25px;
+  }
+  
+  .footer__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .footer__col {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+    gap: 20px;
+  }
+  
+  .footer__col h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+  
+  .footer__col h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .footer__col ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer__col ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer__col ul li a {
+    text-decoration: none;
+    color: gainsboro;
+    transition: color 0.3s;
+  }
+  
+  .footer__col ul li a:hover {
+    color: white;
+  }
+  
+  .social-icons a {
+    color: gainsboro;
+    margin-right: 15px;
+    font-size: 20px;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: white;
+  }
+  
+  .footer__bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+    font-size: 14px;
+    color: gainsboro;
+  }
+  .footer__col h3,.footer__col p{
+    padding-right: 20px;
+  }

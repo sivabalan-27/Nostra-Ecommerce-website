@@ -346,8 +346,9 @@ body{
 /*Tablet View*/
 @media (max-width:1024px){
 .product{
-  width: 250px;
-  height: 300px;
+  width: 240px;
+  height: 370px;
+  grid-template-columns: repeat(3, 1fr);
 }
 .footer {
   padding: 15px 20px;       

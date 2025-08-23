@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const checkboxes = document.querySelectorAll(".filter-checkbox");
   const products = document.querySelectorAll(".product");
+  const desktopSearch = document.getElementById("search-bar");       
+  const mobileSearch = document.getElementById("mobile-search-bar"); 
 
   // Map filter keys (from checkboxes) to product dataset keys
   const keyMap = {
@@ -15,13 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
     return (str || "").toLowerCase().replace(/\s+/g, "");
   }
 
-  // Run filter whenever a checkbox changes
-  checkboxes.forEach(cb => {
-    cb.addEventListener("change", filterProducts);
-  });
-
+  // Main filter function (combines checkbox + search)
   function filterProducts() {
-    // Store active filters
+    // 1. Collect active checkbox filters
     let activeFilters = {
       colour: [],
       gender: [],
@@ -29,20 +27,29 @@ document.addEventListener("DOMContentLoaded", () => {
       Categories: []
     };
 
-    // collect selected filters
     checkboxes.forEach(cb => {
       if (cb.checked) {
         activeFilters[cb.dataset.filter].push(normalize(cb.value));
       }
     });
 
-    // Loop through all products
+    // 2. Get search query (from desktop or mobile)
+    let query = "";
+    if (desktopSearch && desktopSearch.value) {
+      query = desktopSearch.value.toLowerCase();
+    }
+    if (mobileSearch && mobileSearch.value) {
+      query = mobileSearch.value.toLowerCase();
+    }
+
+    // 3. Apply filtering
     products.forEach(product => {
       let show = true;
 
+      // Checkbox filtering
       for (let key in activeFilters) {
         if (activeFilters[key].length > 0) {
-          const datasetKey = keyMap[key]; // e.g. brand, category
+          const datasetKey = keyMap[key];
           const productValue = normalize(product.dataset[datasetKey]);
 
           if (!activeFilters[key].includes(productValue)) {
@@ -52,13 +59,24 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
 
+      // Search filtering
+      let productText = product.innerText.toLowerCase();
+      if (query && !productText.includes(query)) {
+        show = false;
+      }
+
+      // Show or hide product
       product.style.display = show ? "block" : "none";
     });
   }
+
+  // Attach events
+  checkboxes.forEach(cb => cb.addEventListener("change", filterProducts));
+  if (desktopSearch) desktopSearch.addEventListener("keyup", filterProducts);
+  if (mobileSearch) mobileSearch.addEventListener("keyup", filterProducts);
 });
-// ========================
+
 // Offer Bar Close
-// ========================
 var offerBar = document.querySelector(".offer-bar");
 var offerClose = document.getElementById("offer-close");
 
@@ -68,9 +86,7 @@ if (offerBar && offerClose) {
   });
 }
 
-// ========================
 // Side Navbar Open/Close
-// ========================
 var sidenavbar = document.querySelector(".side-navbar");
 var sideNavOpen = document.getElementById("slider-right-activate"); // hamburger icon
 var sideNavClose = document.getElementById("side-navbar-close");    // X icon
@@ -87,9 +103,8 @@ if (sideNavClose && sidenavbar) {
   });
 }
 
-// ========================
+
 // Slider Controls
-// ========================
 var sliderLeftButton = document.getElementById("slider-left-activate");
 var sliderRightButton = document.getElementById("slider-right-activate");
 var sliderImage = document.querySelector(".slider-image-container");
@@ -118,9 +133,7 @@ if (sliderLeftButton && sliderImage) {
   });
 }
 
-// ========================
-// Like Button Toggle
-// ========================
+
 var likeButtons = document.querySelectorAll(".like-button");
 
 likeButtons.forEach((btn) => {
@@ -133,9 +146,9 @@ likeButtons.forEach((btn) => {
   });
 });
 
-// ========================
+
 // Scroll Animation
-// ========================
+
 window.addEventListener("scroll", function () {
   var elements = document.querySelectorAll(".initial-scroll-animate");
   var windowHeight = window.innerHeight;
@@ -147,24 +160,3 @@ window.addEventListener("scroll", function () {
     }
   });
 });
-
-// ========================
-// Search Functionality
-// ========================
-var searchInput = document.getElementById("search-bar");
-var products = document.querySelectorAll(".product");
-
-if (searchInput) {
-  searchInput.addEventListener("keyup", function () {
-    let query = searchInput.value.toLowerCase();
-
-    products.forEach(product => {
-      let text = product.innerText.toLowerCase();
-      if (text.includes(query)) {
-        product.style.display = "block";
-      } else {
-        product.style.display = "none";
-      }
-    });
-  });
-}

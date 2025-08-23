@@ -78,7 +78,7 @@ body{
   background: transparent;
 }
 
-/* Contact Form Section */
+
 
 .contact {
     max-width: 600px;
@@ -124,7 +124,7 @@ body{
     box-shadow: 0 0 5px rgba(11, 1, 3, 0.5);
   }
   /*footer*/
-.footer {
+  .footer {
     background-color: #181818;
     color: white;
     padding: 40px;
@@ -139,41 +139,41 @@ body{
     margin: auto;
   }
   
-  .footer__col {
+  .footer__col,.footer__col-2,.footer__col-3 {
     flex: 1;
     min-width: 250px;
     margin: 10px;
     gap: 20px;
   }
-  
-  .footer__col h3 {
+  .footer__col h3,.footer__col-2 h3{
     margin-bottom: 10px;
     font-size: 22px;
   }
   
-  .footer__col h4 {
+  .footer__col h4,.footer__col-2 h4 {
     margin-bottom: 10px;
     font-size: 18px;
   }
   
-  .footer__col ul {
+  .footer__col ul,.footer__col-2 ul {
     list-style: none;
     padding: 0;
   }
   
-  .footer__col ul li {
+  .footer__col ul li,.footer__col-2 ul li {
     margin-bottom: 8px;
   }
   
-  .footer__col ul li a {
+  .footer__col ul li a,.footer__col-2 ul li a {
     text-decoration: none;
     color: gainsboro;
     transition: color 0.3s;
   }
   
-  .footer__col ul li a:hover {
+  .footer__colul li a:hover,.footer__col-2ul li a:hover {
     color: white;
   }
+  
   
   .social-icons a {
     color: gainsboro;
@@ -220,7 +220,7 @@ body{
     margin-bottom: 10px;
   }
   
-  /* Products grid */
+  /* Products*/
   .products {
     flex: 1;
     display: grid;
@@ -247,10 +247,10 @@ body{
     transform: scale(1.05);
   }
   
-  /* Layout with divider column */
+
 .collections-container {
   display: grid;
-  grid-template-columns: 260px 1px 1fr; /* filters | divider | products */
+  grid-template-columns: 260px 1px 1fr;
   column-gap: 24px;
   align-items: start;
   padding: 20px;
@@ -259,37 +259,24 @@ body{
 
 /* Sidebar */
 .filters {
-  position: sticky;   /* optional: keep sidebar fixed */
-  top: 70px;          /* adjust to navbar height */
+  position: sticky;   
+  top: 70px;          
 }
 
-/* Divider line */
+
 .divider {
-  background: #ddd;   /* light grey line */
+  background: #ddd;   
   width: 1px;
   min-height: 100%;
 }
 
-/* Product grid */
+
 .products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
 }
 
-/* Responsive: remove divider on small screens */
-@media (max-width: 900px) {
-  .collections-container {
-    grid-template-columns: 1fr;
-  }
-  .divider {
-    display: none;
-  }
-  .filters {
-    position: static;
-    margin-bottom: 16px;
-  }
-}
 @media(max-width:500px){
   .navbar__s2,.navbar__s3{
     display: none;
@@ -311,4 +298,101 @@ body{
     margin-right: 10px;
     cursor: pointer;
   }
+  .footer__container {
+    flex-direction: row;   
+    align-items: center;      
+    text-align: center;
+  }
+
+  .footer__col {
+    min-width: 100%;          
+    margin: 10px 0;           
+  }
+
+  .social-icons {
+    margin-top: 10px;
+  }
+  .footer {
+    padding: 20px;           
+  }
+
+  .footer__col {
+    min-width: 150px;        
+    margin: 5px 0;           
+    font-size: 12px;         
+  }
+  .footer__col-2{
+    display: none;
+  }
+  .footer__col h3 {
+    font-size: 16px;        
+  }
+
+  .footer__col h4 {
+    font-size: 14px;
+  }
+
+  .footer__bottom {
+    font-size: 12px;
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+
+  .social-icons a {
+    font-size: 16px;        
+    margin-right: 10px;
+  }
 }
+/*Tablet View*/
+@media (max-width:1024px){
+  .product{
+    width: 250px;
+    height: 300px;
+  }
+  .footer {
+    padding: 15px 20px;       
+  }
+  
+  .footer__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;                
+    text-align: center;
+  }
+  
+  .footer__col, .footer__col-2 {
+    flex: 1 1 40%;            
+    min-width: 180px;         
+    margin: 5px 0;           
+    font-size: 13px;         
+  }
+  .footer__col h3 {
+    font-size: 16px;
+    margin-bottom: 5px;       
+  }
+  
+  .footer__col h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .footer__col ul li {
+    margin-bottom: 4px;       
+  }
+  
+  .social-icons {
+    margin-top: 5px;
+  }
+  
+  .social-icons a {
+    font-size: 15px;          
+    margin-right: 8px;
+  }
+  
+  .footer__bottom {
+    font-size: 12px;
+    margin-top: 8px;
+    padding-top: 6px;
+  }
+  }

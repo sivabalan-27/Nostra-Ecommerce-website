@@ -25,198 +25,222 @@
             <li><a href="contact.html">Contact US</a></li>
         </ul>
     </div>
-        <!-- navbar (already done) -->
+        
         <div class="collections-container">
           <!-- Filters Sidebar -->
-          <aside class="filters">
-            <h3>Filters</h3>
-      
-            <!-- Colour -->
-            <div class="filter">
-              <h4>Colour</h4>
-              <label><input type="checkbox" class="filter-checkbox" data-filter="colour" value="red"> Red</label><br>
-              <label><input type="checkbox" class="filter-checkbox" data-filter="colour" value="blue"> Blue</label><br>
-              <label><input type="checkbox" class="filter-checkbox" data-filter="colour" value="black"> Black</label><br>
-            </div>
-      
-            <!-- Gender -->
-            <div class="filter">
-              <h4>Gender</h4>
-              <label><input type="checkbox" class="filter-checkbox" data-filter="gender" value="men"> Men</label><br>
-              <label><input type="checkbox" class="filter-checkbox" data-filter="gender" value="women"> Women</label><br>
-             
-            </div>
-      
-            <!-- Brand -->
-            <div class="filter">
-              <h4>Brand</h4>
-              <label><input type="checkbox" class="filter-checkbox" data-filter="brand" value="puma"> Puma</label><br>
-              <label><input type="checkbox" class="filter-checkbox" data-filter="brand" value="adidas"> Adidas</label><br>
-              <label><input type="checkbox" class="filter-checkbox" data-filter="brand" value="the souled Store"> The Souled Store</label><br>
-              <label><input type="checkbox" class="filter-checkbox" data-filter="brand" value="us plo"> US polo</label><br>
-              <label><input type="checkbox" class="filter-checkbox" data-filter="brand" value="levis"> Levi's</label><br>
-              <label><input type="checkbox" class="filter-checkbox" data-filter="brand" value="Louis philippe"> Louis philippe</label><br>
-              <label><input type="checkbox" class="filter-checkbox" data-filter="brand" value="allen solly"> Allen Solly</label><br>
-              <label><input type="checkbox" class="filter-checkbox" data-filter="brand" value="jockey"> Jockey</label><br>
-            </div>
-          </aside>
+            <aside class="filters">
+              <h3>Filters</h3>
+        
+              <!-- Colour -->
+              <div class="filter">
+                <h4>Colour</h4>
+                <div class="filter-content">
+                  <label><input type="checkbox" class="filter-checkbox" data-filter="colour" value="black"> Black</label><br>
+                  <label><input type="checkbox" class="filter-checkbox" data-filter="colour" value="grey"> Grey</label><br>
+                <label><input type="checkbox" class="filter-checkbox" data-filter="colour" value="blue"> Blue</label><br>
+                <label><input type="checkbox" class="filter-checkbox" data-filter="colour" value="green"> Green</label><br>
+                  <label><input type="checkbox" class="filter-checkbox" data-filter="colour" value="yellow"> Yellow</label><br>
+                <label><input type="checkbox" class="filter-checkbox" data-filter="colour" value="brown"> Brown</label><br>
+                
+                </div>
+              </div>
+        
+              <!-- Gender -->
+              <div class="filter">
+                <h4>Gender</h4>
+                <div class="filter-content">
+                  <label><input type="checkbox" class="filter-checkbox" data-filter="gender" value="men"> Men</label><br>
+                <label><input type="checkbox" class="filter-checkbox" data-filter="gender" value="women"> Women</label><br>
+                </div>
+              </div>
+        
+              <!-- Brand -->
+              <div class="filter">
+                <h4>Brand</h4>
+                <div class="filter-content">
+                  <label><input type="checkbox" class="filter-checkbox" data-filter="brand" value="puma"> Puma</label><br>
+                  <label><input type="checkbox" class="filter-checkbox" data-filter="brand" value="adidas"> Adidas</label><br>
+                  <label><input type="checkbox" class="filter-checkbox" data-filter="brand" value="the souled Store"> The Souled Store</label><br>
+                  <label><input type="checkbox" class="filter-checkbox" data-filter="brand" value="us polo"> US polo</label><br>
+                  <label><input type="checkbox" class="filter-checkbox" data-filter="brand" value="levis"> Levi's</label><br>
+                  <label><input type="checkbox" class="filter-checkbox" data-filter="brand" value="Louis philippe"> Louis philippe</label><br>
+                  <label><input type="checkbox" class="filter-checkbox" data-filter="brand" value="jockey"> Jockey</label><br>
+                </div>
+              </div>
+
+              <!--catogeries-->
+              <div class="filter">
+                <h4>Categories</h4>
+                <div class="filter-content">
+                  <label><input type="checkbox" class="filter-checkbox" data-filter="Categories" value="shirt"> Shirt</label><br>
+                  <label><input type="checkbox" class="filter-checkbox" data-filter="Categories" value="tshirt"> Tshirt</label><br>
+                <label><input type="checkbox" class="filter-checkbox" data-filter="Categories" value="pant"> Pant</label><br>
+                <label><input type="checkbox" class="filter-checkbox" data-filter="Categories" value="trackpant"> Track pant</label><br>
+                  <label><input type="checkbox" class="filter-checkbox" data-filter="Categories" value="hoodie"> hoodie</label><br>
+                <label><input type="checkbox" class="filter-checkbox" data-filter="Categories" value="skirt"> skirt</label><br>
+                
+                </div>
+              </div>
+            </aside>
+        
       
          
           <!--products-->
-            <div class="products">
-            <div class="product">
+
+          <div class="products">
+            <div class="product" data-colour="black" data-gender="men" data-brand="puma" data-category="hoodie">
               <img src="./images/puma men hoodie.webp" alt="Puma Hoodie">
               <div class="Products__details">
-                <h4>EVOSTRIPE Full-Zip Men's Slim Fit Hoodie</h4>
+                <h4>Puma Men's Black Slim Fit Hoodie</h4>
                 <h4 class="products__price">₹4,199</h4>
               </div>
-            
             </div>
-            <div class="product">
+    
+            <div class="product" data-colour="grey" data-gender="men" data-brand="puma" data-category="tshirt">
               <img src="./images/puma men tshirt.webp" alt="Puma Hoodie">
               <div class="Products__details">
-                <h4>EVOSTRIPE Full-Zip Men's Slim Fit Hoodie</h4>
-                <h4 class="products__price">₹4,199</h4>
+                <h4>Puma Grey Men's Sports T-Shirt</h4>
+                <h4 class="products__price">₹1,999</h4>
               </div>
             
             </div>
-            <div class="product">
+            <div class="product" data-colour="brown" data-gender="women" data-brand="thesouledstore" data-category="tshirt">
               <img src="./images/the souled store women tshirt.webp" alt="Puma Hoodie">
               <div class="Products__details">
-                <h4>EVOSTRIPE Full-Zip Men's Slim Fit Hoodie</h4>
-                <h4 class="products__price">₹4,199</h4>
+                <h4>The Souled Store Brown Women's Graphic T-Shirt</h4>
+                <h4 class="products__price">₹1,299</h4>
               </div>
             
             </div>
-            <div class="product">
+            <div class="product" data-colour="blue" data-gender="women" data-brand="levis" data-category="skirt">
               <img src="./images/levis women skirt.webp" alt="Puma Hoodie">
               <div class="Products__details">
-                <h4>EVOSTRIPE Full-Zip Men's Slim Fit Hoodie</h4>
-                <h4 class="products__price">₹4,199</h4>
+                <h4>Levi's Blue Women's Denim Skirt</h4>
+                <h4 class="products__price">₹2,499</h4>
               </div>
             </div>
-            <div class="product">
+            <div class="product" data-colour="blue" data-gender="men" data-brand="levis" data-category="pant">
                 <img src="./images/levis jean.webp" alt="Puma Hoodie">
                 <div class="Products__details">
-                  <h4>EVOSTRIPE Full-Zip Men's Slim Fit Hoodie</h4>
-                  <h4 class="products__price">₹4,199</h4>
+                  <h4>Levi's Blue Men's Slim Fit Jeans</h4>
+                  <h4 class="products__price">₹3,499</h4>
                 </div>
               
               </div>
-              <div class="product">
+              <div class="product" data-colour="black" data-gender="men" data-brand="thesouledstore" data-category="shirt">
                 <img src="./images/the souled store men shirt.webp" alt="Puma Hoodie">
                 <div class="Products__details">
-                  <h4>EVOSTRIPE Full-Zip Men's Slim Fit Hoodie</h4>
-                  <h4 class="products__price">₹4,199</h4>
+                  <h4>The Souled Store Black Men's Casual Shirt</h4>
+                  <h4 class="products__price">₹1,999</h4>
                 </div>
               
               </div>
-              <div class="product">
+              <div class="product" data-colour="" data-gender="women" data-brand="" data-category="tshirt">
                 <img src="./images/Fitted T-shirt.avif" alt="Puma Hoodie">
                 <div class="Products__details">
-                  <h4>EVOSTRIPE Full-Zip Men's Slim Fit Hoodie</h4>
-                  <h4 class="products__price">₹4,199</h4>
+                  <h4>Adidas Women's Slim Fit T-Shirt</h4>
+                  <h4 class="products__price">₹899</h4>
                 </div>
               
               </div>
-              <div class="product">
+              <div class="product" data-colour="" data-gender="women" data-brand="thesouledstore" data-category="shirt">
                 <img src="./images/the souled store women shirt.webp" alt="Puma Hoodie">
                 <div class="Products__details">
-                  <h4>EVOSTRIPE Full-Zip Men's Slim Fit Hoodie</h4>
-                  <h4 class="products__price">₹4,199</h4>
+                  <h4>The Souled Store White Women's Casual Shirt</h4>
+                  <h4 class="products__price">₹1,699</h4>
                 </div>
               </div>
-              <div class="product">
+              <div class="product" data-colour="grey" data-gender="men" data-brand="jockey" data-category="trackpant">
                 <img src="./images/jockey men track.webp" alt="Puma Hoodie">
                 <div class="Products__details">
-                  <h4>EVOSTRIPE Full-Zip Men's Slim Fit Hoodie</h4>
-                  <h4 class="products__price">₹4,199</h4>
+                  <h4>Jockey Grey Men's Track Pants</h4>
+                  <h4 class="products__price">₹1,799</h4>
                 </div>
               
               </div>
-              <div class="product">
+              <div class="product" data-colour="" data-gender="men" data-brand="jockey" data-category="tshirt">
                 <img src="./images/jockey men tshirt.webp" alt="Puma Hoodie">
                 <div class="Products__details">
-                  <h4>EVOSTRIPE Full-Zip Men's Slim Fit Hoodie</h4>
-                  <h4 class="products__price">₹4,199</h4>
+                  <h4>Jockey Men's Round Neck T-Shirt</h4>
+                  <h4 class="products__price">₹999</h4>
                 </div>
               
               </div>
-              <div class="product">
+              <div class="product" data-colour="green" data-gender="men" data-brand="Louis philippe" data-category="shirt">
                 <img src="./images/Louis Philippe men shirt.webp" alt="Puma Hoodie">
                 <div class="Products__details">
-                  <h4>EVOSTRIPE Full-Zip Men's Slim Fit Hoodie</h4>
-                  <h4 class="products__price">₹4,199</h4>
+                  <h4>Louis Philippe Green Men's Formal Shirt</h4>
+                  <h4 class="products__price">₹2,799</h4>
                 </div>
               
               </div>
-              <div class="product">
+              <div class="product" data-colour="black" data-gender="men" data-brand="puma" data-category="trackpant">
                 <img src="./images/Men's-Zippered-Jersey-Pants.avif" alt="Puma Hoodie">
                 <div class="Products__details">
-                  <h4>EVOSTRIPE Full-Zip Men's Slim Fit Hoodie</h4>
-                  <h4 class="products__price">₹4,199</h4>
+                  <h4>Puma Black Men's Zippered Track Pants</h4>
+                  <h4 class="products__price">₹2,499</h4>
                 </div>
               </div>
-              <div class="product">
+              <div class="product" data-colour="blue" data-gender="women" data-brand="uspolo" data-category="tshirt">
                 <img src="./images/us polo women tshirt.webp" alt="Puma Hoodie">
                 <div class="Products__details">
-                  <h4>EVOSTRIPE Full-Zip Men's Slim Fit Hoodie</h4>
-                  <h4 class="products__price">₹4,199</h4>
+                  <h4>U.S. Polo Blue Women's Cotton T-Shirt</h4>
+                  <h4 class="products__price">₹1,499</h4>
                 </div>
               
               </div>
-              <div class="product">
+              <div class="product" data-colour="black" data-gender="women" data-brand="adidas" data-category="tshirt">
                 <img src="./images/adidas women tshirt.webp" alt="Puma Hoodie">
                 <div class="Products__details">
-                  <h4>EVOSTRIPE Full-Zip Men's Slim Fit Hoodie</h4>
-                  <h4 class="products__price">₹4,199</h4>
+                  <h4>Adidas Black Women's Training T-Shirt</h4>
+                  <h4 class="products__price">₹1,699</h4>
                 </div>
               
               </div>
-              <div class="product">
+              <div class="product" data-colour="blue" data-gender="men" data-brand="levis" data-category="pant">
                 <img src="./images/levis women jean.webp" alt="Puma Hoodie">
                 <div class="Products__details">
-                  <h4>EVOSTRIPE Full-Zip Men's Slim Fit Hoodie</h4>
-                  <h4 class="products__price">₹4,199</h4>
+                  <h4>Levi's Blue Women's Skinny Jeans</h4>
+                  <h4 class="products__price">₹2,999</h4>
                 </div>
               
               </div>
-              <div class="product">
+              <div class="product" data-colour="black" data-gender="men" data-brand="puma" data-category="hoodie">
                 <img src="./images/EVOSTRIPE-Full-Zip-Men's-Slim-Fit-Hoodie.avif" alt="Puma Hoodie">
                 <div class="Products__details">
-                  <h4>EVOSTRIPE Full-Zip Men's Slim Fit Hoodie</h4>
+                  <h4>Puma Full-Zip Men's Slim Fit Hoodie</h4>
                   <h4 class="products__price">₹4,199</h4>
                 </div>
               </div>
-              <div class="product">
+              <div class="product" data-colour="yellow" data-gender="men" data-brand="puma" data-category="hoodie">
                 <img src="./images/BASIC HOODIE.jpg" alt="Puma Hoodie">
                 <div class="Products__details">
-                  <h4>EVOSTRIPE Full-Zip Men's Slim Fit Hoodie</h4>
-                  <h4 class="products__price">₹4,199</h4>
+                  <h4>Puma Yellow Men's Basic Hoodie</h4>
+                  <h4 class="products__price">₹2,199</h4>
                 </div>
               
               </div>
-              <div class="product">
+              <div class="product" data-colour="grey" data-gender="men" data-brand="adidas" data-category="trackpant">
                 <img src="./images/adidas men track.webp" alt="Puma Hoodie">
                 <div class="Products__details">
-                  <h4>EVOSTRIPE Full-Zip Men's Slim Fit Hoodie</h4>
-                  <h4 class="products__price">₹4,199</h4>
+                  <h4>Adidas Grey Men's Training Track Pants</h4>
+                  <h4 class="products__price">₹2,299</h4>
                 </div>
               
               </div>
-              <div class="product">
+              <div class="product" data-colour="black" data-gender="men" data-brand="puma" data-category="trackpant">
                 <img src="./images/puma track pant.webp" alt="Puma Hoodie">
                 <div class="Products__details">
-                  <h4>EVOSTRIPE Full-Zip Men's Slim Fit Hoodie</h4>
-                  <h4 class="products__price">₹4,199</h4>
+                  <h4>Puma Black Men's Track Pant</h4>
+                  <h4 class="products__price">₹2,199</h4>
                 </div>
               
               </div>
-              <div class="product">
+              <div class="product" data-colour="blue" data-gender="men" data-brand="adidas" data-category="tshirt">
                 <img src="./images/Men's-Slim-Fit-Polo-T-shirt.avif" alt="Puma Hoodie">
                 <div class="Products__details">
-                  <h4>EVOSTRIPE Full-Zip Men's Slim Fit Hoodie</h4>
-                  <h4 class="products__price">₹4,199</h4>
+                  <h4>Adidas Blue Men's Slim Fit Polo T-Shirt</h4>
+                  <h4 class="products__price">₹1,999</h4>
                 </div>
               </div>
             </div>
